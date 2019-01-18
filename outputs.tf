@@ -13,3 +13,7 @@ output "id_bucket" {
 output "arn_bucket" {
   value = "${element(concat(aws_s3_bucket.bucket_no_encrypt.*.arn, aws_s3_bucket.bucket_encrypt.*.arn), 0)}"
 }
+
+output "bucket_regional_domain_name" {
+  value = "${element(concat(aws_s3_bucket.bucket_no_encrypt.*.bucket_regional_domain_name, aws_s3_bucket.bucket_encrypt.*.bucket_regional_domain_name), 0)}"
+}
