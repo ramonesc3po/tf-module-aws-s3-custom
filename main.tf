@@ -16,7 +16,7 @@ resource "aws_s3_bucket_policy" "bucket_no_encrypt" {
 }
 
 resource "aws_s3_bucket_policy" "bucket_encrypt" {
-  count = "${var.is_encrypted ? 1 : 0}"
+  count = "${var.is_encrypted ? 0 : 1}"
 
   bucket = "${aws_s3_bucket.bucket_encrypt.id}"
   policy = "${var.policy_json}"
