@@ -85,8 +85,7 @@ variable "kms_master_key_id" {
 
 variable "policy_json" {
   description = "(Optional)Define data policy"
-  type = "map"
-  default = {}
+  default = "{}"
 }
 
 variable "s3_actions" {
