@@ -85,7 +85,7 @@ variable "kms_master_key_id" {
 
 variable "policy_json" {
   description = "(Optional)Define data policy"
-  default = "{}"
+  default = ""
 }
 
 variable "s3_actions" {
