@@ -11,7 +11,7 @@ locals {
 }
 
 resource "aws_s3_bucket_policy" "bucket_no_encrypt" {
-  count = "${var.is_encrypted ? 0 : var.policy_json}"
+  count = "${var.is_encrypted ? 0 : local.policy_json}"
 
   bucket = "${aws_s3_bucket.bucket_no_encrypt.id}"
   policy = "${var.policy_json}"
